@@ -27,9 +27,9 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       String message = '';
 
       if (e.code == 'invalid-email') {
-        message = 'Not user found for that email';
+        message = 'Пользователь для этого адреса электронной почты не найден.';
       } else if (e.code == 'invalid-credential') {
-        message = 'Wrong password provided for that user';
+        message = 'Для этого пользователя указан неверный пароль';
       }
 
       return Left(message);
@@ -52,9 +52,10 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       String message = '';
 
       if (e.code == 'weak-password') {
-        message = 'The password provided is too weak';
+        message = 'Указанный пароль слишком слабый';
       } else if (e.code == 'email-already-in-use') {
-        message = 'An account already exists with that email.';
+        message =
+            'Учетная запись с таким адресом электронной почты уже существует.';
       }
 
       return Left(message);
