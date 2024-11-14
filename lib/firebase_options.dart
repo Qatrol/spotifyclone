@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'spotify-6ee1f.appspot.com',
     measurementId: 'G-8CDV1223TH',
   );
+
 }

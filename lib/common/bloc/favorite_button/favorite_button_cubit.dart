@@ -17,7 +17,7 @@ class FavoriteButtonCubit extends Cubit<FavoriteButtonState> {
       (isFavorite){
         emit(
           FavoriteButtonUpdated(
-            isFavorite: isFavorite
+            isFavorite: isFavorite  
           )
         );
       },

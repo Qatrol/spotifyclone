@@ -71,7 +71,7 @@ class AuthFirebaseServiceImpl extends AuthFirebaseService {
       var user = await firebaseFirestore
           .collection('Users')
           .doc(firebaseAuth.currentUser?.uid)
-          .get();
+          .get(); 
 
       UserModel userModel = UserModel.fromJson(user.data()!);
       userModel.imageURL =
